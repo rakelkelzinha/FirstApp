@@ -14,9 +14,10 @@ class PessoaRepository(context: Context) {
     suspend fun getPessoas(id: Int){
         firstAppDb.getPessoa(id)
     }
-    suspend fun getPessoa(id: Int){
-        firstAppDb.getPessoa(id)
+    suspend fun getPessoa(id: Int) : Pessoa{
+       return firstAppDb.getPessoa(id)
     }
+
     suspend fun getPessoas():List<Pessoa>{
         return firstAppDb.getAll()
     }
