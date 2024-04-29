@@ -26,4 +26,10 @@
         android:name="com.rakel.firstapp.view.AllPessoasFragment"
         android:label="Pessoas"
         tools:layout="@layout/fragment_all_pessoas" />
+    <fragment
+        android:id="@+id/pessoaDetailFragment"
+        android:name="com.rakel.firstapp.view.PessoaDetailFragment"
+        android:label="Detalhes"
+        tools:layout="@layout/fragment_pessoa_detail" />
+
 </navigation>

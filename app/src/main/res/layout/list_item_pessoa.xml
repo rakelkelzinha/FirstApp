@@ -1,111 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="4dp">
-        <LinearLayout
+        android:layout_margin="4dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="10dp"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgBoy"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/baseline_boy_24"
+                app:tint="#03A9FA"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBaseline_toTopOf="parent"
+                app:layout_constraintBaseline_toBottomOf="parent"/>
 
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imgGirl"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/girl_24"
+                app:tint="#E91E63"
+                app:layout_constraintStart_toEndOf="@+id/imgBoy"
+                app:layout_constraintBaseline_toTopOf="parent"
+                app:layout_constraintBaseline_toBottomOf="parent"/>
 
 
-            <TextView
-                android:id="@+id/lblNome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nome: "
-                android:textStyle="bold"
-                android:textSize="16sp"/>
             <TextView
                 android:id="@+id/tvNome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rakel: "
-                android:layout_marginEnd="20dp"/>
-            <TextView
-                android:id="@+id/lblIdade"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Idade: "
-                android:textStyle="bold"
-                android:textSize="16sp"/>
+                android:layout_marginEnd="20dp"
+                app:layout_constraintStart_toEndOf="@+id/imgGirl"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Rakel: " />
 
             <TextView
                 android:id="@+id/tvIdade"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="17: "
-                android:layout_marginEnd="20dp"/>
+                android:layout_marginEnd="20dp"
+                app:layout_constraintStart_toEndOf="@+id/imgGirl"
+                app:layout_constraintTop_toBottomOf="@+id/tvNome"
+                android:text="17: " />
 
             <TextView
-                android:id="@+id/lblSexo"
+                android:id="@+id/tvfaixaEtaria"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sexo: "
-                android:textStyle="bold"
-                android:textSize="16sp"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="Infantil"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
 
-                <ImageView
-                    android:id="@+id/imgGirl"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/girl_24">
-
-                </ImageView>
-
-                <ImageView
-                    android:id="@+id/imgBoy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/baseline_boy_24">
-
-                </ImageView>
-
-
-
-
-            <TextView
-                android:id="@+id/tvSexo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sexo: "/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-
-
-        <TextView
-            android:id="@+id/lblfaixaEtaria"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="faixaEtaria: "
-            android:textStyle="bold"
-            android:textSize="16sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvfaixaEtaria">
-
-        </TextView>
-   </LinearLayout>
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
 
